@@ -4,12 +4,12 @@ function calcular(operacion) {
   const resultadoEl = document.getElementById('resultado');
 
   if (isNaN(num1) || isNaN(num2)) {
-    resultadoEl.textContent = 'Por favor, introduce ambos números.';
+    resultadoEl.textContent = 'No olvides ingresar los dos números.';
     return;
   }
 
   if (operacion === '/' && num2 === 0) {
-    resultadoEl.textContent = 'No se puede dividir entre cero.';
+    resultadoEl.textContent = 'Invalido el dividir entre 0, intenta otro número.';
     return;
   }
 
