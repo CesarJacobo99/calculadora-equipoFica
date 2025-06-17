@@ -8,6 +8,11 @@ function calcular(operacion) {
     return;
   }
 
+  if (operacion === '/' && num2 === 0) {
+    resultadoEl.textContent = 'No se puede dividir entre cero.';
+    return;
+  }
+
   let resultado;
   switch (operacion) {
     case '+':
@@ -20,10 +25,6 @@ function calcular(operacion) {
       resultado = num1 * num2;
       break;
     case '/':
-      if (num2 === 0) {
-        resultadoEl.textContent = 'Error: División entre cero';
-        return;
-      }
       resultado = num1 / num2;
       break;
   }
